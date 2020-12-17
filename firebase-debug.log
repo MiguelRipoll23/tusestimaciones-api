@@ -1,0 +1,63 @@
+[debug] [2020-12-12T23:37:16.255Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T23:37:16.255Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\migue\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy -P staging-tusestimaciones
+[debug] [2020-12-12T23:37:16.271Z] CLI Version:   8.19.0
+[debug] [2020-12-12T23:37:16.271Z] Platform:      win32
+[debug] [2020-12-12T23:37:16.271Z] Node Version:  v14.4.0
+[debug] [2020-12-12T23:37:16.271Z] Time:          Sun Dec 13 2020 00:37:16 GMT+0100 (Central European Standard Time)
+[debug] [2020-12-12T23:37:16.271Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T23:37:16.271Z] 
+[debug] [2020-12-12T23:37:16.302Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-12T23:37:16.318Z] > authorizing via signed-in user
+[debug] [2020-12-12T23:37:16.318Z] [iam] checking project staging-tusestimaciones for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-12-12T23:37:16.334Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/staging-tusestimaciones:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-12-12T23:37:17.224Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 12 Dec 2020 23:37:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=655","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-12T23:37:17.224Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/staging-tusestimaciones/serviceAccounts/staging-tusestimaciones@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-12-12T23:37:17.949Z] <<< HTTP RESPONSE 404 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sat, 12 Dec 2020 23:37:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-12T23:38:14.068Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T23:38:14.068Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\migue\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy -P staging-tusestimaciones
+[debug] [2020-12-12T23:38:14.068Z] CLI Version:   8.19.0
+[debug] [2020-12-12T23:38:14.084Z] Platform:      win32
+[debug] [2020-12-12T23:38:14.084Z] Node Version:  v14.4.0
+[debug] [2020-12-12T23:38:14.084Z] Time:          Sun Dec 13 2020 00:38:14 GMT+0100 (Central European Standard Time)
+[debug] [2020-12-12T23:38:14.084Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T23:38:14.084Z] 
+[debug] [2020-12-12T23:38:14.115Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-12T23:38:14.131Z] > authorizing via signed-in user
+[debug] [2020-12-12T23:38:14.131Z] [iam] checking project staging-tusestimaciones for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-12-12T23:38:14.147Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/staging-tusestimaciones:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-12-12T23:38:15.043Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 12 Dec 2020 23:38:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=653","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-12T23:38:15.074Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/staging-tusestimaciones/serviceAccounts/staging-tusestimaciones@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-12-12T23:38:15.810Z] <<< HTTP RESPONSE 404 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sat, 12 Dec 2020 23:38:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-12T23:38:15.810Z] <<< HTTP RESPONSE BODY {"error":{"code":404,"message":"Not found; Gaia id not found for email staging-tusestimaciones@appspot.gserviceaccount.com","status":"NOT_FOUND"}}
+[debug] [2020-12-12T23:38:15.810Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Not found; Gaia id not found for email staging-tusestimaciones@appspot.gserviceaccount.com {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Not found; Gaia id not found for email staging-tusestimaciones@appspot.gserviceaccount.com","status":"NOT_FOUND"}},"response":{"statusCode":404,"body":{"error":{"code":404,"message":"Not found; Gaia id not found for email staging-tusestimaciones@appspot.gserviceaccount.com","status":"NOT_FOUND"}},"headers":{"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sat, 12 Dec 2020 23:38:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"},"request":{"uri":{"protocol":"https:","slashes":true,"auth":null,"host":"iam.googleapis.com","port":443,"hostname":"iam.googleapis.com","hash":null,"search":null,"query":null,"pathname":"/v1/projects/staging-tusestimaciones/serviceAccounts/staging-tusestimaciones@appspot.gserviceaccount.com:testIamPermissions","path":"/v1/projects/staging-tusestimaciones/serviceAccounts/staging-tusestimaciones@appspot.gserviceaccount.com:testIamPermissions","href":"https://iam.googleapis.com/v1/projects/staging-tusestimaciones/serviceAccounts/staging-tusestimaciones@appspot.gserviceaccount.com:testIamPermissions"},"method":"POST"}}},"exit":1,"message":"HTTP Error: 404, Not found; Gaia id not found for email staging-tusestimaciones@appspot.gserviceaccount.com","status":404}
+[debug] [2020-12-12T23:38:15.966Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:121:11)
+    at Object.join (path.js:375:7)
+    at Object.checkFunctionsSDKVersion [as fn] (C:\Users\migue\AppData\Roaming\npm\node_modules\firebase-tools\lib\checkFirebaseSDKVersion.js:34:28)
+    at Command.<anonymous> (C:\Users\migue\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:170:30)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\migue\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:5:58)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-12-12T23:39:25.906Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T23:39:25.922Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\migue\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy -P staging-tusestimaciones
+[debug] [2020-12-12T23:39:25.922Z] CLI Version:   8.19.0
+[debug] [2020-12-12T23:39:25.922Z] Platform:      win32
+[debug] [2020-12-12T23:39:25.922Z] Node Version:  v14.4.0
+[debug] [2020-12-12T23:39:25.922Z] Time:          Sun Dec 13 2020 00:39:25 GMT+0100 (Central European Standard Time)
+[debug] [2020-12-12T23:39:25.922Z] ----------------------------------------------------------------------
+[debug] [2020-12-12T23:39:25.922Z] 
+[debug] [2020-12-12T23:39:25.969Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-12T23:39:25.969Z] > authorizing via signed-in user
+[debug] [2020-12-12T23:39:25.969Z] [iam] checking project staging-tusestimaciones for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-12-12T23:39:25.984Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/staging-tusestimaciones:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-12-12T23:39:26.910Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 12 Dec 2020 23:39:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=654","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-12T23:39:26.910Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/staging-tusestimaciones/serviceAccounts/staging-tusestimaciones@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-12-12T23:39:27.723Z] <<< HTTP RESPONSE 404 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Sat, 12 Dec 2020 23:39:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}

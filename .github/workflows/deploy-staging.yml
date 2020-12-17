@@ -1,0 +1,111 @@
+name: Deploy to staging
+
+on:
+  push:
+    branches:
+      - 'staging'
+
+jobs:
+  build-package:
+    name: Build package
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        ref: staging
+
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: functions/node_modules
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('functions/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
+
+    - name: Install package
+      run: cd functions && npm ci
+      
+    - name: Build package
+      run: cd functions && npm run build
+
+    - name: Cleanup package
+      run: |
+            rm tools -rf
+            rm functions/node_modules -rf
+            rm functions/src -rf
+
+    - name: Upload package
+      uses: actions/upload-artifact@v2
+      with:
+        name: package
+        path: .
+
+  deploy-staging:
+    name: Deploy to staging
+    needs: build-package
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://europe-west2-staging-tusestimaciones.cloudfunctions.net/api
+
+    steps:
+    - name: Download package
+      uses: actions/download-artifact@v2
+      with:
+        name: package
+
+    - name: Install package
+      run: cd functions && npm ci
+
+    - name: Deploy to staging
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy -P staging-tusestimaciones --only functions
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        
+  deploy-production:
+    name: Deploy to production
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://europe-west2-tusestimaciones.cloudfunctions.net/api
+  
+    steps:
+    - name: Download package
+      uses: actions/download-artifact@v2
+      with:
+        name: package
+
+    - name: Install package
+      run: cd functions && npm ci
+
+    - name: Deploy to production
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy -P tusestimaciones --only functions
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+    - uses: actions/checkout@v2
+
+    - name: Merge staging branch
+      uses: devmasx/merge-branch@v1.3.1
+      with:
+        type: now
+        from_branch: staging
+        target_branch: main
+        github_token: ${{ github.token }}
+        
