@@ -153,10 +153,10 @@ export const v2_estimations = functions.https.onRequest(async (req, res) => {
       // Order by remaining time
       estimations = estimations.sort((a, b) => {
         if (a[2] === null) {
-          return 1;
+          return -1;
         }
         else if (b[2] === null) {
-          return -1;
+          return 1;
         }
         else if (a[2] > b[2]) {
           return 1;
